@@ -1,0 +1,35 @@
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: rgba(41, 41, 41, 0.897);
+    font-weight: 900;
+}
+.navBar div {
+    color: #c9400a;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+}
+.listaNav{
+    display: flex;
+    list-style: none;
+    
+}
+.listaNav li {
+    margin: 5px;
+    font-weight: 800;
+    text-transform: uppercase;
+} 
+.listaNav li a {
+    color: #c9400a;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px red;
+}
+.listaNav li a:hover {
+    color: red;
+    transform: scale(1.1);
+}
