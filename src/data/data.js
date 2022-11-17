@@ -1,0 +1,107 @@
+export const data =[
+    {
+        nombre: "Buzo Trasher",
+        importe: 11800,
+        talle: "XL",
+        id: 0
+        
+    },
+    {
+        nombre: "Pantalon de jean clasico",
+        importe: 9000,
+        talle: "XXl",
+        id: "1"
+    },
+    {
+        nombre: "Zapatillas negras new air 3.0",
+        importe: 26800,
+        talle: "43",
+        id: 2
+    },
+    {
+        nombre: "Remera MC LOVIN",
+        importe: 2700,
+        talle: "L",
+        id: 3
+    },
+    {
+        nombre: "Camiseta deportiva negra",
+        importe: 5123,
+        talle: "M",
+        id: 4
+    },
+    {
+        nombre: "Gorro nike",
+        importe:10600 ,
+        talle: "38",
+        id: 5
+    },
+    {
+        nombre: "Medias fogosas",
+        importe: 2300,
+        talle: "40",
+        id: 6
+    },
+    {
+        nombre: "Pantalon nike babucha",
+        importe:7900 ,
+        talle: "XL",
+        id: 7
+    },
+    {
+        nombre: "Remera negra fachera",
+        importe: 8000,
+        talle: "M",
+        id: 8
+    },
+    {
+        nombre: "Remera normie",
+        importe: 4500,
+        talle: "M",
+        id: 9
+    },
+    {
+        nombre: "Campera adidas",
+        importe: 9300,
+        talle: "L",
+        id: 10
+    },
+    {
+        nombre: "Campera de boca",
+        importe: 3000,
+        talle: "M",
+        id: 11
+    },
+    {
+        nombre: "Buzo belgrano enrenamiento gris",
+        importe: 9000,
+        talle: "XL",
+        id: 12
+    },
+    {
+        nombre: "Buzo belgrano negro",
+        importe: 13000,
+        talle: "XXL",
+        id: 13
+    },
+    {
+        nombre: "Zapatillas deportivas galacticas",
+        importe: 29000,
+        talle: "39",
+        id: 14
+    },
+    {
+        nombre: "Zapatillas konverse",
+        importe: 18000,
+        talle: "43",
+        id: 15
+    },
+    {
+        nombre: "Remera DRAGON BALL Z",
+        importe: 6000,
+        talle: "S",
+        id: 16
+    }
+
+]   
+

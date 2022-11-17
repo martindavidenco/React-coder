@@ -1,6 +1,8 @@
 import CartWidget from "../CartWidget/CartWidget"
 import logo from "../../assets/free-logo.png"
 import "./NavBar.css"
+import { NavLink } from "react-router-dom"
+
 const NavBar = () => {
     return (
         <div className="navBar">
@@ -13,10 +15,20 @@ const NavBar = () => {
                 </div>
             </div>
             <ul className="listaNav">
-                <li><a className="itemsLista" href="index.html">Inicio</a></li>
-                <li><a className="itemsLista" href="pages/explorar.html">Explorar</a></li>
-                <li><a className="itemsLista" href="pages/publicar.html">Publicar</a></li>
-                <li><a className="itemsLista" href="pages/registro.html">Registrarme</a></li>
+                <li>
+                    <NavLink to="/" className={({isActive})=>isActive? "active" : "inactive"}>
+                        INICIO pa
+                    </NavLink>
+                </li>
+                <li> <NavLink to="/" className={({isActive})=>isActive? "active" : "inactive"}>
+                        EXPLORAR
+                    </NavLink></li>
+                <li> <NavLink to="/" className={({isActive})=>isActive? "active" : "inactive"}>
+                        CAMPERAS
+                    </NavLink></li>
+                <li> <NavLink to="/" className={({isActive})=>isActive? "active" : "inactive"}>
+                        PANTALONES
+                    </NavLink></li>
             </ul>
             <CartWidget />
         </div>

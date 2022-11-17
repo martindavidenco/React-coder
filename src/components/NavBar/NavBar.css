@@ -25,11 +25,17 @@
     text-transform: uppercase;
 } 
 .listaNav li a {
-    color: #c9400a;
+    /* color: #c9400a; */
     text-decoration: none;
     text-shadow: 2px 2px 2px red;
 }
 .listaNav li a:hover {
     color: red;
     transform: scale(1.1);
+}
+.active{
+    color: yellow;
+}
+.inactive{
+    color: blue;
 }
