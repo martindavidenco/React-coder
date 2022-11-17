@@ -17,7 +17,7 @@ const NavBar = () => {
             <ul className="listaNav">
                 <li>
                     <NavLink to="/" className={({isActive})=>isActive? "active" : "inactive"}>
-                        INICIO pa
+                        INICIO 
                     </NavLink>
                 </li>
                 <li> <NavLink to="/" className={({isActive})=>isActive? "active" : "inactive"}>
