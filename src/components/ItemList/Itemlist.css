@@ -1,0 +1,17 @@
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    animation-name: cards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+  @keyframes cards {
+    from {
+      transform: translate(1400px);
+    }
+    to {
+      transform: translate(0);
+    }
+  }

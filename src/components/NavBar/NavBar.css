@@ -34,8 +34,8 @@
     transform: scale(1.1);
 }
 .active{
-    color: yellow;
+    color: #c9400a;
 }
 .inactive{
-    color: blue;
+    color: yellow;
 }

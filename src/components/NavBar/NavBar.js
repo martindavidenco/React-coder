@@ -20,14 +20,11 @@ const NavBar = () => {
                         INICIO 
                     </NavLink>
                 </li>
-                <li> <NavLink to="/" className={({isActive})=>isActive? "active" : "inactive"}>
-                        EXPLORAR
+                <li> <NavLink to="/category/deportiva" className={({isActive})=>isActive? "active" : "inactive"}>
+                        Ropa deportiva
                     </NavLink></li>
-                <li> <NavLink to="/" className={({isActive})=>isActive? "active" : "inactive"}>
-                        CAMPERAS
-                    </NavLink></li>
-                <li> <NavLink to="/" className={({isActive})=>isActive? "active" : "inactive"}>
-                        PANTALONES
+                <li> <NavLink to="/category/casual" className={({isActive})=>isActive? "active" : "inactive"}>
+                        Ropa casual
                     </NavLink></li>
             </ul>
             <CartWidget />

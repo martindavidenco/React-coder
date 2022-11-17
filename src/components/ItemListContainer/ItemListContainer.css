@@ -35,3 +35,6 @@
     color: rgba(138, 202, 65, 0.599);
     background: linear-gradient(45deg, rgb(255, 157, 0), #ce6809, rgb(153, 13, 13));
 }
+.main {
+    background-color: rgba(41, 41, 41, 0.897);
+  }

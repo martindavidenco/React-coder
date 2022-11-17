@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 const CartWidget = () => {
     return (
         <>
-        <img src={logoCarro} width="75" height="75" alt="Publica"/>
-        <Link to={"/detail"}>Carrito</Link>
+        
+        <Link to="/carrito"><img src={logoCarro} width="75" height="75" alt="Publica"/></Link>
         </>
     )
 }

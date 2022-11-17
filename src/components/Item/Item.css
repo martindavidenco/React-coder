@@ -1,0 +1,62 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.544);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 10px 10px 24px -4px;
+    transition: all 0.8s;
+  }
+  .card:hover {
+    transform: scale(1.1);
+    color: #c9400a;
+  }
+  .card p  {
+    background-image: linear-gradient(to bottom, #c9400a, #ac652b);
+    color: rgb(255, 221, 25);
+    font-weight: 900;
+    border-radius: 15px;
+  }
+  .card a img {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .card {
+    height: 400px;
+    margin: 15px;
+    transition: all 1s;
+    box-shadow: 10px 10px 24px -4px;
+    background-color: rgba(41, 41, 41, 0.897);
+  }
+  .card:hover {
+    transform: scale(1.1);
+    color: #c9400a;
+  }
+  .card img {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-self: center;
+  }
+  .card div {
+    color: orangered;
+    display: flex;
+    flex-direction: column;
+  }
+  .card div a {
+    color: #c9400a;
+    background-color: rgba(175, 155, 42, 0.897);
+    border-color: orangered;
+    display: flex;
+    align-self: center;
+  }
+  .card div a:hover {
+    color: rgba(175, 155, 42, 0.897);
+    background-color: #c9400a;
+    border-color: #c9400a;
+  }
