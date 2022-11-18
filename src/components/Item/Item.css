@@ -60,3 +60,14 @@
     background-color: #c9400a;
     border-color: #c9400a;
   }
+  .btn {
+    color: #c9400a;
+    background-color: rgba(175, 155, 42, 0.897);
+    border-color: #c9400a;
+    
+    padding: 5px;
+  }
+  .btn:hover {
+    color: rgba(175, 155, 42, 0.897);
+    background-color: #c9400a;
+  }

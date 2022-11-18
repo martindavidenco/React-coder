@@ -6,7 +6,7 @@ export const ItemDetailContainer = () => {
     const [productoSeleccionado, setProductoSeleccionado]= useState()
     const {id} = useParams();
     const getProduct = ()=>{
-        const productoFiltrado = data.filter((producto)=>{
+        const productoFiltrado = data.find((producto)=>{
             return producto.id == id;
         })
         setProductoSeleccionado(productoFiltrado)
