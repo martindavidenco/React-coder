@@ -6,6 +6,7 @@ import { getData } from "../../data/data";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
+    
     const [items, setItems] = useState([])
     const { categoryName } = useParams()
     console.log(categoryName)
