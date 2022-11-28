@@ -18,7 +18,7 @@ const ItemListContainer = () => {
                 });
                 resolve(filteredData)
             } else { resolve(data) }
-        },)
+        },2000)
     })
     useEffect(() => {
         getProducts
@@ -35,7 +35,7 @@ const ItemListContainer = () => {
 
     return (
         <div className="main">
-            {products.lenght == 0 ? <img src={loading} /> :
+            {items.lenght == 0 ? <img src={loading} /> :
                 <ItemList products={items} />}
         </div>
     )
