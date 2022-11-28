@@ -1,0 +1,20 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: footer;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(41, 41, 41, 0.897);
+  }
+  footer a img {
+    width: 80px;
+    height: 80px;
+  }
+  footer div p {
+    color: #c9400a;
+  }
+  footer div a img {
+    width: 30px;
+    height: 30px;
+  }

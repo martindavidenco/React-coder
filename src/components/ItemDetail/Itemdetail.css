@@ -1,0 +1,83 @@
+.mainProducto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(41, 41, 41, 0.897);
+}
+
+.megusta {
+    border: solid red;
+    color: red;
+    cursor: pointer;
+    background: linear-gradient(to right, transparent 50%, red 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0, 5s;
+}
+
+.megusta:hover {
+    background-position: right;
+    color: black;
+    font-weight: 700;
+}
+
+.tituloYInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloYInfo div {
+    display: flex;
+}
+
+.tituloYInfo h2 {
+    color: #c9400a;
+}
+
+.tablaInfo {
+    background-color: #ce6809;
+    display: flex;
+    align-content: space-between;
+    font-weight: normal;
+    border: 1px solid rgba(0, 0, 0, 0.544);
+    background: linear-gradient(45deg, red, #ce6809, rgb(153, 13, 13));
+    background-size: 400% 400%;
+}
+
+.tablaInfo div div div {
+    border: 3px black;
+}
+
+.whatsapp {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.whatsapp h3 {
+    padding: 10px;
+    color: #00cc66;
+    font-size: 500;
+}
+
+.semper {
+    width: 300px;
+}
+
+@keyframes gradiente {
+    0% {
+        background-position: 0 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+.fotoProd{
+    width: 300px;
+    height: 300px;
+}

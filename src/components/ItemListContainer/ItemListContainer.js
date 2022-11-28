@@ -4,9 +4,9 @@ import { useState, useEffect } from "react"
 import ItemList from "../ItemList/ItemList";
 import { getData } from "../../data/data";
 import { useParams } from "react-router-dom";
+import loading from "../../assets/loading.gif"
 
 const ItemListContainer = () => {
-    
     const [items, setItems] = useState([])
     const { categoryName } = useParams()
     console.log(categoryName)
@@ -18,13 +18,13 @@ const ItemListContainer = () => {
                 });
                 resolve(filteredData)
             } else { resolve(data) }
-        }, 1000)
+        },)
     })
     useEffect(() => {
         getProducts
             .then((res) => setItems(res))
             .catch(error => console.log(error))
-    },[categoryName])
+    }, [categoryName])
     useEffect(() => {
         getData().then((products) => {
             setItems(products)
@@ -35,7 +35,8 @@ const ItemListContainer = () => {
 
     return (
         <div className="main">
-            <ItemList products={items} />
+            {products.lenght == 0 ? <img src={loading} /> :
+                <ItemList products={items} />}
         </div>
     )
 };

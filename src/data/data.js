@@ -2,27 +2,30 @@ export const data = [
     {
         nombre: "Buzo Trasher",
         importe: 11800,
-        talle: "XL",
+        talle: "XXL XL M ",
         id: 0,
         category: "casual",
-        img:"prod0.jpg"
+        img:"prod0.jpg",
+        tipo: "NUEVO"
         
     },
     {
         nombre: "Pantalon de jean clasico",
         importe: 9000,
-        talle: "XXl",
+        talle: "XXL M S",
         id: "1",
         category: "casual",
-        img:"prod1.jpg"
+        img:"prod1.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Zapatillas negras new air 3.0",
         importe: 26800,
-        talle: "43",
+        talle: "43 40 37",
         id: 2,
         category: "deportiva",
-        img:"prod2.jpg"
+        img:"prod2.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Remera MC LOVIN",
@@ -30,15 +33,17 @@ export const data = [
         talle: "L",
         id: 3,
         category: "casual",
-        img:"prod3.jpg"
+        img:"prod3.jpg",
+        tipo: "USADO"
     },
     {
         nombre: "Camiseta deportiva negra",
         importe: 5123,
-        talle: "M",
+        talle: "M L XL",
         id: 4,
         category: "deportiva",
-        img:"prod4.jpg"
+        img:"prod4.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Gorro nike",
@@ -46,7 +51,8 @@ export const data = [
         talle: "38",
         id: 5,
         category: "casual",
-        img:"prod5.jpg"
+        img:"prod5.jpg",
+        tipo: "USADO"
     },
     {
         nombre: "Medias fogosas",
@@ -54,7 +60,8 @@ export const data = [
         talle: "40",
         id: 6,
         category: "casual",
-        img:"prod6.jpg"
+        img:"prod6.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Pantalon nike babucha",
@@ -62,15 +69,17 @@ export const data = [
         talle: "XL",
         id: 7,
         category: "deportiva",
-        img:"prod7.jpg"
+        img:"prod7.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Remera negra fachera",
         importe: 8000,
-        talle: "M",
+        talle: "M S XS",
         id: 8,
         category: "casual",
-        img:"prod8.jpg"
+        img:"prod8.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Remera normie",
@@ -78,7 +87,8 @@ export const data = [
         talle: "M",
         id: 9,
         category: "casual",
-        img:"prod9.jpg"
+        img:"prod9.jpg",
+        tipo: "USADO"
     },
     {
         nombre: "Campera adidas",
@@ -86,15 +96,17 @@ export const data = [
         talle: "L",
         id: 10,
         category: "deportiva",
-        img:"prod10.jpg"
+        img:"prod10.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Campera de boca",
         importe: 3000,
-        talle: "M",
+        talle: "M XXL L XL",
         id: 11,
         category: "deportiva",
-        img:"prod11.jpg"
+        img:"prod11.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Buzo belgrano entrenamiento gris",
@@ -102,7 +114,8 @@ export const data = [
         talle: "XL",
         id: 12,
         category: "deportiva",
-        img:"prod12.jpg"
+        img:"prod12.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Buzo belgrano negro",
@@ -110,7 +123,8 @@ export const data = [
         talle: "XXL",
         id: 13,
         category: "deportiva",
-        img:"prod13.jpg"
+        img:"prod13.jpg",
+        tipo: "USADO"
     },
     {
         nombre: "Zapatillas deportivas galacticas",
@@ -118,7 +132,8 @@ export const data = [
         talle: "39",
         id: 14,
         category: "deportiva",
-        img:"prod14.jpg"
+        img:"prod14.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Zapatillas konverse",
@@ -126,7 +141,8 @@ export const data = [
         talle: "43",
         id: 15,
         category: "casual",
-        img:"prod15.jpg"
+        img:"prod15.jpg",
+        tipo: "NUEVO"
     },
     {
         nombre: "Remera DRAGON BALL Z",
@@ -134,7 +150,8 @@ export const data = [
         talle: "S",
         id: 16,
         category: "casual",
-        img:"prod16.jpg"
+        img:"prod16.jpg",
+        tipo: "USADO"
     }
 
 ]
