@@ -152,8 +152,7 @@ export const data = [
         category: "casual",
         img:"prod16.jpg",
         tipo: "USADO"
-    }
-
+    } 
 ]
 
 export const getData = () => {

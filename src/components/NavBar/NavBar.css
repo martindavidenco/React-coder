@@ -1,11 +1,10 @@
 .navBar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 20px;
     flex-wrap: wrap;
-    background-color: rgba(41, 41, 41, 0.897);
+    background-color: rgba(8, 8, 8, 0.897);
     font-weight: 900;
 }
 .navBar div {
@@ -38,4 +37,10 @@
 }
 .inactive{
     color: yellow;
+}
+.titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 2px 2px 2px red;
 }

@@ -1,4 +1,4 @@
-.card {
+.productoNombre {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,43 +10,46 @@
     text-align: center;
     box-shadow: 10px 10px 24px -4px;
     transition: all 0.8s;
+    color: rgba(41, 41, 41, 0.897);
   }
-  .card:hover {
+  .productoNombre:hover {
     transform: scale(1.1);
     color: #c9400a;
   }
-  .card p  {
-    background-image: linear-gradient(to bottom, #c9400a, #ac652b);
+  .productoNombre h3{
+    color: #a86f58;
+  }
+  .productoNombre h3:hover{
+    color: #c9400a;
+  }
+  .importe {
+    text-decoration: none;
     color: rgb(255, 221, 25);
     font-weight: 900;
     border-radius: 15px;
   }
-  .card a img {
-    width: 200px;
-    height: 150px;
+  .item {
+    width: 285px;
+    display: flex;
+    align-self: center;
+    height: 250px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
   
-  .card {
+  .productoNombre {
     height: 400px;
     margin: 15px;
     transition: all 1s;
     box-shadow: 10px 10px 24px -4px;
     background-color: rgba(41, 41, 41, 0.897);
   }
-  .card:hover {
-    transform: scale(1.1);
-    color: #c9400a;
-  }
-  .card img {
-    height: 250px;
-    width: 250px;
-    display: flex;
-    align-self: center;
-  }
+  
   .card div {
     color: orangered;
     display: flex;
-    flex-direction: column;
+   
   }
   .card div a {
     color: #c9400a;
@@ -63,11 +66,43 @@
   .btn {
     color: #c9400a;
     background-color: rgba(175, 155, 42, 0.897);
-    border-color: #c9400a;
-    
+    text-decoration-line: none;
     padding: 5px;
   }
-  .btn:hover {
+
+  .productoNombre {
+    text-decoration: underline rgba(41, 41, 41, 0.897);
+  }
+  .importe {
+    background-color:rgba(41, 41, 41, 0.897); ;
+    text-decoration:none;
+    width: 230px;
+    
+    text-align: end;
+   
+    
+  }
+  .addCart{
+    height: 30px;
+    width: 30px;
+  }
+  .btn{
+    color: #c9400a;
+    background-color: rgba(175, 155, 42, 0.897);
+    border-color: orangered;
+    
+    align-self: center;
+    text-decoration: underline rgba(175, 155, 42, 0.897);
+    border-radius: 10px;
+    font-weight: 900;
+}
+.btn:hover{
     color: rgba(175, 155, 42, 0.897);
     background-color: #c9400a;
-  }
+    border-color: #c9400a;
+    text-decoration: underline #c9400a;
+    
+}
+
+  
+  

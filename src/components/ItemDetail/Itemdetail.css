@@ -6,7 +6,9 @@
     align-items: center;
     background-color: rgba(41, 41, 41, 0.897);
 }
-
+.fotoinfo{
+    width: 100%;
+}
 .megusta {
     border: solid red;
     color: red;
@@ -32,6 +34,7 @@
 
 .tituloYInfo div {
     display: flex;
+
 }
 
 .tituloYInfo h2 {
@@ -41,15 +44,29 @@
 .tablaInfo {
     background-color: #ce6809;
     display: flex;
+    flex-direction: column;
     align-content: space-between;
     font-weight: normal;
     border: 1px solid rgba(0, 0, 0, 0.544);
     background: linear-gradient(45deg, red, #ce6809, rgb(153, 13, 13));
     background-size: 400% 400%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
-.tablaInfo div div div {
-    border: 3px black;
+.tablaInfo div {
+    margin: 10px;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.tablaInfo div p {
+    border: solid 3px black;
+    height: fit-content;
 }
 
 .whatsapp {
@@ -77,7 +94,34 @@
         background-position: 0 50%;
     }
 }
-.fotoProd{
+
+.fotoProd {
     width: 300px;
     height: 300px;
+}
+
+.itemCount {
+    display: flex;
+    
+
+}
+.itemCount div {
+    display: flex;
+}
+
+.itemCount Button {
+    font-weight: 900;
+}
+
+.compra {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.compra Button {
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

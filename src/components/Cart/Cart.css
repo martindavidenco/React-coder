@@ -1,0 +1,342 @@
+.cart {
+    background-color: rgba(8, 8, 8, 0.897);
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.cartEmpty {
+    background-color: rgba(8, 8, 8, 0.897);
+    justify-content: center;
+    text-align: center;
+    height: 175vh;
+    display: flex;
+}
+
+.close-modal2 {
+    justify-content: end;
+    align-self: flex-end;
+}
+
+.formContainer {
+    width: 50%;
+    height: 53vh;
+    margin: 30px;
+    background-color: rgba(8, 8, 8, 0.897);
+    color: rgb(172, 184, 195);
+    border: solid 4px black;
+
+}
+
+.itemCart {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 50px;
+    background-color: rgba(8, 8, 8, 0.897);
+    color: rgb(172, 184, 195);
+    border: solid 4px black;
+    border-radius: 10px;
+  
+
+}
+.itemCart img{
+    width: 250px;
+    border-radius: 10px;
+}
+.productTitle {
+    color: #c9400a;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px red;
+}
+
+.itemCart div div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.red-bg {
+    background-color: #c9b90a;
+}
+
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #b35749;
+    font-size: 12px;
+    border: 1px solid #cd4a2c;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+.swal-button:hover{
+    background-color: #b3a149;
+}
+.swal-title {
+    color: #c9400a;
+    font-size: 50px;
+    font-weight: 900;
+
+    margin: 0px;
+    font-size: 16px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+    margin-bottom: 28px;
+}
+
+.swal-text {
+
+    padding: 17px;
+
+    display: block;
+    margin: 22px;
+    text-align: center;
+    color: #61534e;
+}
+
+.titleCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #c9400a;
+    font-size: 20px;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px red;
+}
+
+.titleCart2 {
+    display: flex;
+    justify-content: center;
+    color: #c9400a;
+    font-size: 20px;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px red;
+}
+
+.titleCart2 h3 {
+    margin-right: 10px;
+    color: chartreuse;
+    text-decoration: dotted;
+}
+
+.titleCart h3 {
+    color: chartreuse;
+    text-decoration: dotted;
+}
+
+.cardImages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardImages div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cardImages div img {
+    margin-top: 3px;
+}
+
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.container form {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+    padding: 20px;
+
+}
+
+.datosContainer {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+    padding: 20px;
+    margin: 10px;
+    display: block;
+    color: #444;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+    flex: 1 1 150px;
+
+}
+
+.inputBoxClient input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    color: #444;
+}
+
+.container form .inputBox {
+    margin-top: 20px;
+}
+
+.container form .inputBox span {
+    display: block;
+    color: #999;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    color: #444;
+}
+
+.container form .flexbox {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+.front {
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.container form .flexbox .inputBox {
+    flex: 1 1 150px;
+}
+
+.container form .submit-btn {
+    width: 100%;
+    background: linear-gradient(45deg, rgb(235, 98, 40), rgb(255, 20, 20));
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover {
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.container .card-container .front {
+    position: absolute;
+
+    width: 70%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgb(17, 14, 20), rgb(31, 13, 8));
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    padding: 10px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .4s ease-out;
+}
+
+.container .card-container .front .image {
+
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img {
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box {
+    padding: 30px 0;
+    font-size: 22px;
+    color: #fff;
+}
+
+.container .card-container .front .flexbox {
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1) {
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box {
+    font-size: 15px;
+    color: #fff;
+}
+
+.container .card-container .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, rgb(17, 14, 20), rgb(31, 17, 8));
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-out;
+}
+
+.container .card-container .back .stripe {
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box {
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span {
+    color: #fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box {
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color: #333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img {
+    margin-top: 30px;
+    height: 30px;
+}
+.inputBox div {
+    display: flex;
+    justify-content: space-between;
+}
+.inputBox div span {
+    align-self: center;
+}

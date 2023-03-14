@@ -1,40 +1,52 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import "./Itemdetail.css"
-import whatsapp from "../../assets/whatsapp.png"
+import "./Itemdetail.css";
+import whatsapp from "../../assets/whatsapp.png";
+import Button from 'react-bootstrap/Button';
+import { useState, useContext } from 'react';
+import { cartContext } from '../../context/CartProvider';
+import { Link } from 'react-router-dom';
+
 const productoImg = require.context("../../assets/productos", true)
+
 export const ItemDetail = ({ productoSeleccionado }) => {
-  console.log(productoSeleccionado)
+  const { addCart } = useContext(cartContext);
+  const [count, setCount] = useState(1)
   return (
-    <div class="mainProducto">
-      <div class="tituloYInfo">
-        <h2>{productoSeleccionado.nombre}</h2>
-        <button class="megusta" type="button">&hearts; Like</button>
-        <div class="fotoinfo">  <Card.Img className='fotoProd' variant="top" src={productoImg(`./${productoSeleccionado.img}`)} />
-          <div class="tablaInfo keyframe">
-            <table>
-              <tr>
-                <td>ESTADO DEL PRODUCTO:</td>
-                <td>{productoSeleccionado.tipo}</td>
-              </tr>
-              <tr>
-                <td>Talle/s:</td>
-                <td>{productoSeleccionado.talle}</td>
-              </tr>
-              <tr>
-                <td>Colores:</td>
-                <td>Unico color</td>
-              </tr>
-              <tr>
-                <td>Precio:</td>
-                <td>$2000</td>
-              </tr>
-            </table>
+    <div className="mainProducto">
+      <div className="tituloYInfo">
+        <h2>{productoSeleccionado.title}</h2>
+        <button className="megusta" type="button">&hearts; Like</button>
+        <div className="fotoinfo">
+          <Card.Img className='fotoProd' variant="top" src={productoImg(`./${productoSeleccionado.imageId}`)} />
+          <div className="tablaInfo keyframe">
+        {productoSeleccionado.description}
+            <div>
+              <div>Estado del producto:</div>
+              <p>{productoSeleccionado.Estado}</p>
+            </div>
+            <div>
+              <div>Talle/s:</div>
+              <p>{productoSeleccionado.talle}</p>
+            </div>
+            <div>
+              <div>stock:</div>
+              <p>{productoSeleccionado.stock}</p>
+            </div>
+            <div>
+              <div>Precio:</div>
+              <p>{productoSeleccionado.price}</p>
+            </div>
           </div>
-          <Button variant="primary">AÑADIR AL CARRITO</Button>
+
         </div>
-        <div class="whatsapp"><a target="_blank"
-          href="https://api.whatsapp.com/send/?phone=543513752299&text=Hola+quiero+lo+que+estas+vendiendo&app_absent=0"><img
+        <div className='itemCount'>
+          <Button onClick={() => setCount(count + 1)}>+</Button>
+          <Button onClick={() => setCount(count > 1 ? count - 1 : count - 0)}>-</Button>
+          <Button onClick={() => addCart(productoSeleccionado, count)} variant="primary">AÑADIR {count} {productoSeleccionado.title.toUpperCase()} AL CARRITO</Button>
+        </div>
+        <Link className='compra' to="/carrito"><Button>VER CARRITO</Button></Link>
+        <div className="whatsapp"><a target="_blank"
+          href={`https://api.whatsapp.com/send/?phone=543513752299&text=Hola+quiero+el+${productoSeleccionado.title}+que+estas+vendiendo&app_absent=0`}><img
             width="50" height="50" src={whatsapp} /></a>
           <h3>Contacta con el anunciante!</h3>
         </div>

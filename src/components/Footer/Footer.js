@@ -12,8 +12,8 @@ const Footer = () => {
                 <p> &copy2022 Desarrollado por Martin Davidenco </p>
             </div>
             <div><a href="https://www.facebook.com/Leomessi" title="facebook"><img src={facebook} /></a>
-                <a href="https://www.twitter.com/leomessi"><img src={twitter} /></a>
-                <a href="https://www.instagram.com/leomessi"><img src={instagram} /></a>
+                <a href="https://www.twitter.com/leomessi"><img src={twitter}/></a>
+                <a href="https://www.instagram.com/leomessi"><img src={instagram}/></a>
             </div>
         </footer>
     )
