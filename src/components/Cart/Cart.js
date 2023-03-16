@@ -133,7 +133,11 @@ const Cart = () => {
                             </div>
 
                         </div>
+                        <div>
+                            
                         <button className='btn' onClick={() => removeItem(product.id)}>Eliminar producto</button>
+                        </div>
+                      
                     </div>
                 ))}
                 <div>

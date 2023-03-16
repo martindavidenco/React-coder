@@ -18,6 +18,7 @@ const ItemListContainer = () => {
     const { categoryName } = useParams()
 
     //  FILTER PRICE ITEMS      
+    // lower price
     const [lowerPriceFilter, setlowerPriceFilter] = useState(false);
 
     const toggleLowerFilter = () => {
@@ -25,20 +26,26 @@ const ItemListContainer = () => {
         if (highestPriceFilter) { setHighestPriceFilter(false) }
     }
 
+    //highest price
+
     const [highestPriceFilter, setHighestPriceFilter] = useState(false);
 
     const toggleHighestFilter = () => {
         setHighestPriceFilter(!highestPriceFilter)
         if (lowerPriceFilter) { setlowerPriceFilter(false) }
     }
+
+    // param filter
+
     const [paramFilter, setParamFilter] = useState(false)
 
     const toggleParamFilter = () => {
-        setParamFilter(!paramFilter)
+            if(paramFilter){getProducts()}else{setParamFilter(!paramFilter)}
+            
+        
     }
-
-    const [minPrice, setMinPrice] = useState('');
-    const [maxPrice, setMaxprice] = useState('');
+    const [minPrice, setMinPrice] = useState();
+    const [maxPrice, setMaxprice] = useState();
 
     const childrenMinprice = (datoMinPrice,) => {
         setMinPrice(datoMinPrice);
@@ -47,8 +54,7 @@ const ItemListContainer = () => {
     const childrenMaxprice = (datoMaxPrice) => {
         setMaxprice(datoMaxPrice)
     }
-    const [resultado, setResultado] = useState([])
-    const [resultado2, setResultado2] = useState([])
+
 
     // GET DATA
     const getProducts = () => {
@@ -78,11 +84,12 @@ const ItemListContainer = () => {
                         setItems(data)
 
                     }
-                    // if (paramFilter) {
-                    //     setResultado(data.filter(elemento => elemento.price < maxPrice))
-                    //     setResultado2(resultado.filter(elemento => elemento.price > minPrice))
-                    //     setItems(resultado2)
-                    // }
+                    if (paramFilter) {
+                        const resultado = data.filter(elemento => elemento.price < maxPrice)
+                        const resultado2 = resultado.filter(elemento => elemento.price > minPrice)
+                        setItems(resultado2)
+                        
+                    }
                     else {
                         setItems(data)
                     }
@@ -112,12 +119,11 @@ const ItemListContainer = () => {
                         setItems(data)
 
                     }
-
-                    // if (paramFilter) {
-                    //     setResultado(data.filter(elemento => elemento.price < maxPrice))
-                    //     setResultado2(resultado.filter(elemento => elemento.price > minPrice))
-                    //     setItems(resultado2)
-                    // }
+                    if (paramFilter) {
+                        const resultado = data.filter(elemento => elemento.price < maxPrice)
+                        const resultado2 = resultado.filter(elemento => elemento.price > minPrice)
+                        setItems(resultado2)
+                    }
                     else {
                         setItems(data)
                     }
@@ -130,7 +136,7 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         getProducts();
-    }, [categoryName, lowerPriceFilter, highestPriceFilter, paramFilter])
+    }, [categoryName, lowerPriceFilter, highestPriceFilter, paramFilter, minPrice, maxPrice])
 
     return (
         <div className="main">
@@ -140,7 +146,7 @@ const ItemListContainer = () => {
                     <div className="filtrosContainer">
                         <div className=" filtro" onClick={toggleLowerFilter}>MENOR PRECIO </div>
                         <div className="filtro " onClick={toggleHighestFilter}>MAYOR PRECIO </div>
-                        <Modal toggleParamFilter={toggleParamFilter} childrenMinprice={childrenMinprice} childrenMaxprice={childrenMaxprice}> </Modal>
+                        <Modal  toggleParamFilter={toggleParamFilter} childrenMinprice={childrenMinprice} childrenMaxprice={childrenMaxprice}> </Modal>
                     </div>
                 </div>
                 {items.length == 0 ? <img className="loading" src={loading} /> :

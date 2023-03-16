@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import "./Modal.css"
 import filter from "../../assets/filter.png"
-export const Modal = ({ childrenMinprice, childrenMaxprice, toggleParamFilter }) => {
+export const Modal = ({ childrenMinprice, childrenMaxprice, toggleParamFilter  }) => {
     const [modal, settModal] = useState(false);
     const toggleModal = () => {
         settModal(!modal)
@@ -29,23 +29,29 @@ export const Modal = ({ childrenMinprice, childrenMaxprice, toggleParamFilter })
                     <div onClick={toggleModal} className="overlay"></div>
                     <div className="modal-content">
                         <h2>FILTRO DE PRECIOS</h2>
-                        <label for="customRange2" className="form-label">Rango de precios en el que desea buscar
+
+                        <label htmlFor="customRange2" className="form-label">Rango de precios en el que desea buscar
                             productos!</label>
 
                         <input value={precioMinimo}
                             onChange={(ev) => settPrecioMinimo(ev.target.value)}
-
                             className="rango form-range" step="0.5" type="range"
-                            min="0" name="vol1" max="25000" id="customRange2 vol"></input>
+                            min="0" name="vol1" max="40000" id="customRange2 vol">
+
+                        </input>
+
                         <div className="pMax">
-                            <p>Precio mínimo: ${precioMinimo} </p><output id="outvol1" name="outvol1" for="vol1"> </output>
+                            <p>Precio mínimo: ${precioMinimo} </p><output id="outvol1" name="outvol1" htmlFor="vol1"> </output>
                         </div>
 
                         <input value={precioMaximo} onChange={(ev) => settPrecioMaximo(ev.target.value)}
+
                             className="rango form-range" step="0.5" type="range"
-                            min="0" name="vol" max="100000" id="customRange2 vol"></input>
+                            min="0" name="vol" max="40000" id="customRange2 vol">
+
+                        </input>
                         <div className="pMax">
-                            <p>Precio máximo:${precioMaximo}  </p><output id="outvol" name="outvol" for="vol"> </output>
+                            <p>Precio máximo:${precioMaximo}  </p><output id="outvol" name="outvol" htmlFor="vol"> </output>
                         </div><div onClick={priceCall}>
                             <div onClick={toggleModal}><button className="close-modal btn" onClick={toggleParamFilter}>
                                 aplicar filtro y cerrar</button>
