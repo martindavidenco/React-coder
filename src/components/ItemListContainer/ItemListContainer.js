@@ -40,9 +40,9 @@ const ItemListContainer = () => {
     const [paramFilter, setParamFilter] = useState(false)
 
     const toggleParamFilter = () => {
-            if(paramFilter){getProducts()}else{setParamFilter(!paramFilter)}
-            
-        
+        if (paramFilter) { getProducts() } else { setParamFilter(!paramFilter) }
+
+
     }
     const [minPrice, setMinPrice] = useState();
     const [maxPrice, setMaxprice] = useState();
@@ -88,7 +88,7 @@ const ItemListContainer = () => {
                         const resultado = data.filter(elemento => elemento.price < maxPrice)
                         const resultado2 = resultado.filter(elemento => elemento.price > minPrice)
                         setItems(resultado2)
-                        
+
                     }
                     else {
                         setItems(data)
@@ -146,11 +146,13 @@ const ItemListContainer = () => {
                     <div className="filtrosContainer">
                         <div className=" filtro" onClick={toggleLowerFilter}>MENOR PRECIO </div>
                         <div className="filtro " onClick={toggleHighestFilter}>MAYOR PRECIO </div>
-                        <Modal  toggleParamFilter={toggleParamFilter} childrenMinprice={childrenMinprice} childrenMaxprice={childrenMaxprice}> </Modal>
+                        <Modal toggleParamFilter={toggleParamFilter} childrenMinprice={childrenMinprice} childrenMaxprice={childrenMaxprice}> </Modal>
                     </div>
                 </div>
+
                 {items.length == 0 ? <img className="loading" src={loading} /> :
-                    <ItemList products={items} />}</div>
+                    <ItemList products={items} />}
+            </div>
         </div>
     )
 };

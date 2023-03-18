@@ -83,3 +83,8 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 330px){
+  .filtro{
+    font-size: 15px;
+  }
+}

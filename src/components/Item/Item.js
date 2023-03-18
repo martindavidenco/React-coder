@@ -6,7 +6,7 @@ const productoImg = require.context("../../assets/productos", true)
 const Item = ({ product }) => {
   return (
 
-    <div style={{ width: '18rem', height: "10%" }} className='productoNombre'>
+    <div style={{ width: '18rem', height: "100%" }} className='productoNombre'>
       <Link to={`/item/${product.id}`}><img className="item" variant="top" src={productoImg(`./${product.imageId}`)} /></Link>
       <h3  >{product.title}</h3>
       <div className='addContainer'>

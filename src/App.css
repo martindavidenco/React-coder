@@ -14,3 +14,13 @@
     transform: rotate(360deg);
   }
 }
+
+/*-----MEDIAQUERIES-INDEX---*/
+/*----tablet----*/
+@media screen and (max-width: 1023px) {
+  .navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

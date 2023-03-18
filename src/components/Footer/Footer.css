@@ -18,3 +18,26 @@ footer {
     width: 30px;
     height: 30px;
   }
+  @media screen and (max-width: 540px){
+    .footer{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .footer div {
+    display: flex;
+  }
+  .footer div a img {
+    width: 10px;
+    height: 10px;
+  }
+  .footer div p {
+    font-size: 10px;
+  }
+  .footer a img {
+    height: 30px;
+    width: 30px;
+  }
+  }

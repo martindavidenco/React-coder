@@ -30,7 +30,7 @@ const CartProvider = ({ children }) => {
     };
     const removeItem = (id) => {
         setCart(
-            cart.filter((item) => item.id != id)
+            cart.filter((item) => item.id !== id)
         );
     }
     const cleanCart = () => {

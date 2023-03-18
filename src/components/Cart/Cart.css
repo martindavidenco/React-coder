@@ -41,8 +41,9 @@
 
 }
 .itemCart img{
-    width: 250px;
     border-radius: 10px;
+    width: 250px;
+    height: 250px;
 }
 .productTitle {
     color: #c9400a;
@@ -144,6 +145,7 @@
     min-height: 100vh;
 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-flow: column;
@@ -211,7 +213,6 @@
 }
 
 .front {
-    margin-left: 100px;
     margin-bottom: 20px;
 }
 
@@ -247,7 +248,7 @@
 .container .card-container .front {
     position: absolute;
 
-    width: 70%;
+    width: 100%;
     top: 0;
     left: 0;
     background: linear-gradient(45deg, rgb(17, 14, 20), rgb(31, 13, 8));
@@ -339,4 +340,82 @@
 }
 .inputBox div span {
     align-self: center;
+}
+
+@media screen and (max-width:1050px){
+    .itemCart{
+        margin: 10px;
+        width: 100%;
+    }
+    .itemCart img{
+        height: 200px;
+        width: 200px;
+        
+    }
+    .itemCart div h2 {
+        font-size: 20px;
+    }
+    .deleteProduct{
+        width: 70px;
+    }
+    .formContainer{
+        width: 65%;
+    }
+  .cartContainer{
+    width: 80%;
+  }
+}
+@media screen and (max-width:840px){
+
+ .cartContainer{
+    width: 50%;
+  }
+  .itemCart div h2 {
+    font-size: 17px;
+}
+}
+@media screen and (max-width:800px){
+.cart{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cartContainer{
+    width: 80%;
+  }
+  .container form{
+    width: 100%;
+   
+  }
+}
+@media screen and (max-width:500px){
+    .titleCart2{
+        font-size: 15px;
+    }
+    .itemCart{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+    .cartContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .itemCart img{
+        height: 150px;
+        width: 130px;
+        
+    }
+}
+@media screen and (max-width:440px){
+    .itemCart img{
+        height: 120px;
+        width: 100px;
+        
+    }
+    .container form{
+        width: 300px;
+    }
+
 }

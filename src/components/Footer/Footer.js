@@ -7,9 +7,9 @@ import "./Footer.css"
 const Footer = () => {
     return (
         <footer className="footer">
-            <a href="index.html"><img src={logo} /> </a>
+            <a href="/"><img src={logo} /> </a>
             <div>
-                <p> &copy2022 Desarrollado por Martin Davidenco </p>
+                <p> Desarrollado por Martin Davidenco </p>
             </div>
             <div><a href="https://www.facebook.com/Leomessi" title="facebook"><img src={facebook} /></a>
                 <a href="https://www.twitter.com/leomessi"><img src={twitter}/></a>

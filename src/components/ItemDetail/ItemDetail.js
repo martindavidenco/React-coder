@@ -18,8 +18,13 @@ export const ItemDetail = ({ productoSeleccionado }) => {
         <button className="megusta" type="button">&hearts; Like</button>
         <div className="fotoinfo">
           <Card.Img className='fotoProd' variant="top" src={productoImg(`./${productoSeleccionado.imageId}`)} />
-          <div className="tablaInfo keyframe">
-        {productoSeleccionado.description}
+         
+          <div className="tablaInfo">
+            <div>
+            {productoSeleccionado.description}
+
+            </div>
+        
             <div>
               <div>Estado del producto:</div>
               <p>{productoSeleccionado.Estado}</p>
@@ -45,7 +50,8 @@ export const ItemDetail = ({ productoSeleccionado }) => {
           <Button onClick={() => addCart(productoSeleccionado, count)} variant="primary">AÑADIR {count} {productoSeleccionado.title.toUpperCase()} AL CARRITO</Button>
         </div>
         <Link className='compra' to="/carrito"><Button>VER CARRITO</Button></Link>
-        <div className="whatsapp"><a target="_blank"
+        <div className="whatsapp">
+          <a target="_blank"
           href={`https://api.whatsapp.com/send/?phone=543513752299&text=Hola+quiero+el+${productoSeleccionado.title}+que+estas+vendiendo&app_absent=0`}><img
             width="50" height="50" src={whatsapp} /></a>
           <h3>Contacta con el anunciante!</h3>

@@ -110,7 +110,7 @@ const Cart = () => {
         })
     };
     return (
-        <div className={cart.length <= 1 ? "cartEmpty" : "cart"}>
+        <div className={cart.length < 1 ? "cartEmpty" : "cart"}>
 
 
             <div className='cartContainer'>
@@ -135,7 +135,7 @@ const Cart = () => {
                         </div>
                         <div>
                             
-                        <button className='btn' onClick={() => removeItem(product.id)}>Eliminar producto</button>
+                        <button className='btn deleteProduct' onClick={() => removeItem(product.id)}>Eliminar producto</button>
                         </div>
                       
                     </div>
@@ -311,11 +311,11 @@ const Cart = () => {
                                 </form>
 
 
-                            </div>
-                        </div>
                         <div className="titleCart2" >
                             <h3 >Total: ${total}  </h3>
                             <button onClick={createOrder} className="btn" >TERMINAR COMPRA</button>
+                        </div>
+                            </div>
                         </div>
 
                     </div>

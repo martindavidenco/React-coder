@@ -7,16 +7,16 @@ const NavBar = () => {
     return (
         <div className="navBar">
             <div>
-            <img src={logo} width="100px"
-                    height="80px" alt="Logo" />
+                <a href="/"><img src={logo} width="100px"
+                    height="80px" alt="Logo" /></a>
                 <div className="titulo">
                     <h1>FLAME </h1>
-              
+
 
                 </div>
             </div>
             <ul className="listaNav">
-                <li>
+                <li className="inicioButton">
                     <NavLink to="/" className={({ isActive }) => isActive ? "active" : "inactive"}>
                         INICIO
                     </NavLink>
