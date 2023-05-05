@@ -1,7 +1,7 @@
 import { cartContext } from '../../context/CartProvider';
 import "./Cart.css";
 import creditCardForm from "../../assets/creditCardForm.png";
-import creditCard from "../../assets/creditCard.png";
+import creditCardImg from "../../assets/creditCard.png";
 import chip from "../../assets/chip.png";
 import logo from "../../assets/free-logo.png"
 import { useContext, useState, useEffect } from 'react';
@@ -9,10 +9,8 @@ import { collection, addDoc, getFirestore, doc, updateDoc } from 'firebase/fires
 import moment from 'moment/moment';
 import swal from 'sweetalert';
 
-
 //data images
 const productoImg = require.context("../../assets/productos", true)
-
 
 const Cart = () => {
     const { cart, removeItem, cleanCart } = useContext(cartContext);
@@ -25,30 +23,28 @@ const Cart = () => {
         email: ""
     })
 
+    const [creditCard, setCreditCard] = useState({
+        number: "#### #### #### ####",
+        holder: "NOMBRE COMPLETO",
+        month: "MM",
+        year: "YYYY",
+        cvv: "***"
+    });
 
-    const [creditNumber, setCreditNumber] = useState("#### #### #### ####")
-    const [creditHolder, setCreditHolder] = useState("NOMBRE COMPLETO")
-    const [creditMonth, setCreditMonth] = useState("MM")
-    const [creditYear, setCreditYear] = useState("YYYY")
-    const [creditCvv, setCreditCvv] = useState("***")
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        if (name === "number") {
+            // Eliminar los espacios en blanco y los caracteres no numéricos del valor de entrada
+            const newValue = value.replace(/\D/g, "").substring(0, 16);
+            // Agregar espacios cada cuatro caracteres
+            const formattedValue = newValue.replace(/(....)/g, "$1 ");
+            // Actualizar el estado con el valor formateado
+            setCreditCard({ ...creditCard, number: formattedValue });
+        }
+        else { setCreditCard({ ...creditCard, [name]: value }); }
 
+    };
 
-    const imputChangeNumber = (event) => {
-        setCreditNumber(event.target.value)
-
-    }
-    const imputChangeHolder = (event) => {
-        setCreditHolder(event.target.value)
-    }
-    const imputChangeMonth = (event) => {
-        setCreditMonth(event.target.value)
-    }
-    const imputChangeYear = (event) => {
-        setCreditYear(event.target.value)
-    }
-    const imputChangeCvv = (event) => {
-        setCreditCvv(event.target.value)
-    }
 
     const toggleModal = () => {
         settModal(!modal)
@@ -103,6 +99,7 @@ const Cart = () => {
     useEffect(() => {
         getTotalPrice()
     }, [cart])
+
     const handleInputCHange = (event) => {
         setFormValues({
             ...formValues,
@@ -134,10 +131,10 @@ const Cart = () => {
 
                         </div>
                         <div>
-                            
-                        <button className='btn deleteProduct' onClick={() => removeItem(product.id)}>Eliminar producto</button>
+
+                            <button className='btn deleteProduct' onClick={() => removeItem(product.id)}>Eliminar producto</button>
                         </div>
-                      
+
                     </div>
                 ))}
                 <div>
@@ -209,20 +206,22 @@ const Cart = () => {
                                                     <img src={logo} alt="logo" />
 
                                                 </div>
-                                                <img src={creditCard} alt="Visa/masterCard" />
+                                                <img src={creditCardImg} alt="Visa/masterCard" />
 
                                             </div>
-                                            <div className="card-number-box">{creditNumber}</div>
+                                            <div className="card-number-box">{creditCard.number}</div>
                                             <div className="flexbox">
+
                                                 <div className="box">
                                                     <span>Titular:</span>
-                                                    <div className="card-holder-name">{creditHolder}</div>
+                                                    <div className="card-holder-name">{creditCard.holder}</div>
+
                                                 </div>
                                                 <div className="box">
                                                     <span>VENCIMIENTO:</span>
                                                     <div className="expiration">
-                                                        <span className="exp-month">{creditMonth} </span>
-                                                        <span className="exp-year">{creditYear}</span>
+                                                        <span className="exp-month">{creditCard.month} </span>
+                                                        <span className="exp-year">{creditCard.year}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -232,9 +231,9 @@ const Cart = () => {
                                             <div className="stripe"></div>
                                             <div className="box">
                                                 <span>CVV</span>
-                                                <div className="cvv-box">{creditCvv}</div>
+                                                <div className="cvv-box">{creditCard.cvv}</div>
                                                 <img src={logo} alt="logo" />
-                                                <img src={creditCard} alt="" />
+                                                <img src={creditCardImg} alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -243,10 +242,13 @@ const Cart = () => {
                                     <div className="inputBox">
                                         <span>Titular</span>
                                         <input type="text"
+
                                             placeholder='NOMBRE COMPLETO'
                                             className="card-holder-input"
-                                            onChange={imputChangeHolder} />
+                                            name='holder'
+                                            onChange={handleChange} />
                                     </div>
+
                                     <div className="inputBox">
                                         <div><span>Numero de tarjeta
                                         </span>
@@ -254,17 +256,18 @@ const Cart = () => {
                                         </div>
                                         <input type="text"
                                             maxLength="19"
-                                            name='numeroTarjeta'
+                                            name="number"
                                             className="card-number-input"
-                                            onChange={imputChangeNumber}
-                                        />
+                                            onChange={handleChange}
 
+                                            placeholder='#### #### #### ####'
+                                        />
                                     </div>
                                     <div className="flexbox">
                                         <div className="inputBox">
                                             <span>MES VENCIMIENTO</span>
-                                            <select name="" id="" className="month-input" onChange={imputChangeMonth} >
-                                                <option value="month" selected disabled>mes</option>
+                                            <select name="month" id="" className="month-input" onChange={handleChange}  >
+                                                <option value={creditCard.month} selected disabled>mes</option>
                                                 <option value="01">01</option>
                                                 <option value="02">02</option>
                                                 <option value="03">03</option>
@@ -281,8 +284,9 @@ const Cart = () => {
                                         </div>
                                         <div className="inputBox">
                                             <span>AÑO VENCIMIENTO</span>
-                                            <select name="" id="" className="year-input" onChange={imputChangeYear} >
-                                                <option value="year" selected disabled>año</option>
+
+                                            <select name="year" id="" className="year-input" onChange={handleChange} >
+                                                <option value={creditCard.year} selected disabled>año</option>
                                                 <option value="2021">2021</option>
                                                 <option value="2022">2022</option>
                                                 <option value="2023">2023</option>
@@ -298,8 +302,9 @@ const Cart = () => {
                                         <div className="inputBox">
                                             <span>CVV</span>
                                             <input type="text"
+                                                name="cvv" value={creditCard.cvv} onChange={handleChange}
                                                 maxLength="4" className="cvv-input"
-                                                onChange={imputChangeCvv}
+
                                                 onClick={() => {
                                                     document.querySelector('.back').style.backfaceVisibility = "visible";
                                                     document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
@@ -311,10 +316,10 @@ const Cart = () => {
                                 </form>
 
 
-                        <div className="titleCart2" >
-                            <h3 >Total: ${total}  </h3>
-                            <button onClick={createOrder} className="btn" >TERMINAR COMPRA</button>
-                        </div>
+                                <div className="titleCart2" >
+                                    <h3 >Total: ${total}  </h3>
+                                    <button onClick={createOrder} className="btn" >TERMINAR COMPRA</button>
+                                </div>
                             </div>
                         </div>
 
